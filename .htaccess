@@ -1,0 +1,26 @@
+# حماية ملفات التكوين وقاعدة البيانات
+<FilesMatch "\.(sql|ini|log|conf|bak)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# منع استعراض المجلدات
+Options -Indexes
+
+# إعدادات PHP للأمان (إذا كانت الاستضافة تسمح بذلك)
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+    php_value error_log error_log.php
+</IfModule>
+
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>
+
+# حماية ملف .htaccess نفسه
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
