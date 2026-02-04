@@ -289,7 +289,6 @@ define('DB_PASS', 'webapp123');
 
 **ملاحظة مهمة:** هذا المشروع مخصص للأغراض التعليمية. في بيئة الإنتاج، يُنصح بإضافة المزيد من ميزات الأمان مثل:
 - HTTPS/SSL
-- CSRF Protection
 - Rate Limiting
 - Two-Factor Authentication (2FA)
 - Password Reset Functionality
